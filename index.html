@@ -80,10 +80,17 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:10px;
+      gap:12px;
       font-weight:600;
-      letter-spacing:.02em;
+      font-size:1.05rem;
+      letter-spacing:.04em;
       flex-shrink:0;
+    }
+
+    .brand span{
+      font-family:"Cormorant Garamond", serif;
+      font-size:1.45rem;
+      letter-spacing:.05em;
     }
 
     .logo{
@@ -105,8 +112,8 @@
 
     nav a{
       color:#f1f1f1;
-      font-size:.92rem;
-      letter-spacing:.08em;
+      font-size:.88rem;
+      letter-spacing:.12em;
       text-transform:uppercase;
       transition:.25s ease;
     }
@@ -127,6 +134,7 @@
       transition:.25s ease;
       background:var(--gold);
       color:#111;
+      white-space:nowrap;
     }
 
     .btn:hover{
@@ -140,7 +148,8 @@
     }
 
     .hero{
-      padding:100px 0;
+      position:relative;
+      padding:110px 0;
     }
 
     .hero-grid{
@@ -182,7 +191,7 @@
     #why,
     #faq,
     #contact{
-      padding:100px 0;
+      padding:120px 0;
     }
 
     .about{
@@ -212,15 +221,24 @@
     }
 
     #services{
-      padding:100px 0;
+      padding:120px 0;
     }
 
     .section-title{
       font-family:"Cormorant Garamond", serif;
       font-size:clamp(2.2rem, 5vw, 3.3rem);
-      margin-bottom:40px;
+      margin-bottom:50px;
       line-height:1.08;
       max-width:760px;
+    }
+
+    .section-title::after{
+      content:"";
+      display:block;
+      width:60px;
+      height:2px;
+      background:var(--gold);
+      margin-top:14px;
     }
 
     .services{
@@ -231,16 +249,16 @@
 
     .card{
       background:linear-gradient(180deg, var(--dark2), var(--dark3));
-      padding:28px 24px;
-      border-radius:18px;
+      padding:34px 28px;
+      border-radius:22px;
       border:1px solid rgba(255,255,255,0.06);
       box-shadow:var(--shadow);
-      transition:.25s ease;
+      transition:all .35s ease;
     }
 
     .card:hover{
-      transform:translateY(-4px);
-      border-color:rgba(214,176,103,.28);
+      transform:translateY(-6px) scale(1.02);
+      border-color:rgba(214,176,103,.40);
     }
 
     .card h3{
@@ -255,7 +273,7 @@
     }
 
     .banner-image-section{
-      padding:20px 0 80px;
+      padding:20px 0 90px;
     }
 
     .banner-image-wrap img{
@@ -267,7 +285,7 @@
     }
 
     .cta{
-      padding:100px 0;
+      padding:120px 0;
     }
 
     .cta-box{
@@ -400,13 +418,10 @@
   <div class="container hero-grid">
     <div class="hero-text">
       <p class="eyebrow">Financial Services Broker</p>
-
       <h1>Protect Your Income.<br>Build Your Wealth.</h1>
-
       <p class="hero-sub">
         Helping individuals and families create financial security through living benefits, insurance protection, and long-term wealth strategies.
       </p>
-
       <a href="https://calendly.com/justinalorico" target="_blank" class="btn big">Book a Consultation</a>
     </div>
 
@@ -424,13 +439,10 @@
 
     <div class="about-text">
       <p class="eyebrow">Meet Tina Beena</p>
-
       <h2>Helping people secure their future with confidence.</h2>
-
       <p>
         Tina Beena is a financial services entrepreneur focused on helping individuals and families protect their income, grow their wealth, and create long-term financial stability.
       </p>
-
       <p>
         Through Evolve Your Wealth, she provides support in insurance protection, living benefits, wealth strategies, and agent development for those ready to build a stronger future.
       </p>
@@ -446,30 +458,22 @@
     <div class="services">
       <div class="card">
         <h3>Insurance Protection</h3>
-        <p>
-          Strategies designed to help protect families, income, and long-term financial stability.
-        </p>
+        <p>Strategies designed to help protect families, income, and long-term financial stability.</p>
       </div>
 
       <div class="card">
         <h3>Living Benefits</h3>
-        <p>
-          Insurance solutions that may provide financial protection you can access while still living.
-        </p>
+        <p>Insurance solutions that may provide financial protection you can access while still living.</p>
       </div>
 
       <div class="card">
         <h3>Wealth Strategies</h3>
-        <p>
-          Guidance designed to help individuals build, grow, and protect long-term financial wealth.
-        </p>
+        <p>Guidance designed to help individuals build, grow, and protect long-term financial wealth.</p>
       </div>
 
       <div class="card">
         <h3>Agent Development</h3>
-        <p>
-          Opportunities for motivated individuals interested in building a career in financial services.
-        </p>
+        <p>Opportunities for motivated individuals interested in building a career in financial services.</p>
       </div>
     </div>
   </div>
@@ -483,30 +487,22 @@
     <div class="services">
       <div class="card">
         <h3>Personalized Guidance</h3>
-        <p>
-          Every conversation is centered on your goals, your family, and the future you want to build.
-        </p>
+        <p>Every conversation is centered on your goals, your family, and the future you want to build.</p>
       </div>
 
       <div class="card">
         <h3>Clarity &amp; Education</h3>
-        <p>
-          Financial concepts are explained clearly so you can make informed and confident decisions.
-        </p>
+        <p>Financial concepts are explained clearly so you can make informed and confident decisions.</p>
       </div>
 
       <div class="card">
         <h3>Long-Term Thinking</h3>
-        <p>
-          The focus is not just today’s needs, but also building lasting protection and generational wealth.
-        </p>
+        <p>The focus is not just today’s needs, but also building lasting protection and generational wealth.</p>
       </div>
 
       <div class="card">
         <h3>Growth Opportunities</h3>
-        <p>
-          For those interested in the industry, Tina also helps develop agents nationwide with purpose and vision.
-        </p>
+        <p>For those interested in the industry, Tina also helps develop agents nationwide with purpose and vision.</p>
       </div>
     </div>
   </div>
@@ -536,30 +532,22 @@
     <div class="services">
       <div class="card">
         <h3>What can I book a consultation for?</h3>
-        <p>
-          You can book a consultation to discuss insurance protection, living benefits, wealth strategies, or agent development opportunities.
-        </p>
+        <p>You can book a consultation to discuss insurance protection, living benefits, wealth strategies, or agent development opportunities.</p>
       </div>
 
       <div class="card">
         <h3>Do I need to know exactly what I need first?</h3>
-        <p>
-          No. The consultation is designed to help you understand your options and identify the right direction for your situation.
-        </p>
+        <p>No. The consultation is designed to help you understand your options and identify the right direction for your situation.</p>
       </div>
 
       <div class="card">
         <h3>Can I ask about building in financial services?</h3>
-        <p>
-          Yes. Tina also works with individuals who are interested in developing a career as an agent in financial services.
-        </p>
+        <p>Yes. Tina also works with individuals who are interested in developing a career as an agent in financial services.</p>
       </div>
 
       <div class="card">
         <h3>How do I get started?</h3>
-        <p>
-          The best first step is booking a consultation through Calendly so you can begin the conversation.
-        </p>
+        <p>The best first step is booking a consultation through Calendly so you can begin the conversation.</p>
       </div>
     </div>
   </div>
@@ -568,16 +556,13 @@
 <section id="contact">
   <div class="container contact">
     <h2>Contact</h2>
-
     <p>
       Evolve Your Wealth<br>
       Financial Services Broker
     </p>
-
     <p>
       Ready to take the next step? Book a consultation and start building toward greater financial confidence.
     </p>
-
     <a href="https://calendly.com/justinalorico" target="_blank" class="btn">Book a Consultation</a>
   </div>
 </section>

@@ -1,1 +1,266 @@
+:root{
 
+--dark:#0c1424;
+--dark2:#121c30;
+
+--gold:#d6b067;
+
+--text:#ffffff;
+--muted:#c7c7c7;
+
+--max:1200px;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Inter, sans-serif;
+background:var(--dark);
+color:var(--text);
+line-height:1.6;
+
+}
+
+.container{
+width:90%;
+max-width:var(--max);
+margin:auto;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+
+
+header{
+
+background:#0a1220;
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+}
+
+.nav{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 0;
+
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+}
+
+.logo{
+width:50px;
+height:50px;
+object-fit:contain;
+}
+
+
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+
+
+.btn{
+
+background:var(--gold);
+color:#111;
+padding:10px 18px;
+border-radius:30px;
+font-weight:600;
+
+}
+
+.btn.big{
+padding:14px 30px;
+margin-top:20px;
+display:inline-block;
+}
+
+
+
+.hero{
+
+padding:90px 0;
+
+}
+
+.hero-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+
+}
+
+.hero-text h1{
+
+font-family:"Cormorant Garamond",serif;
+font-size:60px;
+margin-bottom:15px;
+
+}
+
+.hero-sub{
+
+color:var(--muted);
+max-width:500px;
+
+}
+
+.hero-image img{
+
+border-radius:20px;
+
+}
+
+
+
+.about{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+padding:100px 0;
+
+}
+
+.about-text p{
+color:var(--muted);
+margin-bottom:15px;
+}
+
+.about-text h2{
+
+font-family:"Cormorant Garamond",serif;
+font-size:40px;
+margin-bottom:15px;
+
+}
+
+
+
+#services{
+
+padding:100px 0;
+
+}
+
+.section-title{
+
+font-family:"Cormorant Garamond",serif;
+font-size:40px;
+margin-bottom:40px;
+
+}
+
+.services{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+
+}
+
+.card{
+
+background:var(--dark2);
+padding:25px;
+border-radius:12px;
+
+}
+
+.card p{
+color:var(--muted);
+}
+
+
+
+.cta{
+
+padding:100px 0;
+
+}
+
+.cta-box{
+
+text-align:center;
+background:#101a2c;
+padding:60px;
+border-radius:20px;
+
+}
+
+
+
+.contact{
+
+padding:100px 0;
+text-align:center;
+
+}
+
+
+
+footer{
+
+border-top:1px solid rgba(255,255,255,0.1);
+padding:30px 0;
+text-align:center;
+
+}
+
+
+
+@media(max-width:900px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.services{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.services{
+grid-template-columns:1fr;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+}

@@ -70,6 +70,7 @@ header{
   gap:10px;
   font-weight:600;
   letter-spacing:.02em;
+  flex-shrink:0;
 }
 
 .logo{
@@ -86,6 +87,7 @@ nav ul{
   gap:25px;
   list-style:none;
   flex-wrap:wrap;
+  justify-content:center;
 }
 
 nav a{
@@ -239,6 +241,18 @@ nav a:hover{
   color:var(--muted);
 }
 
+.banner-image-section{
+  padding:20px 0 80px;
+}
+
+.banner-image-wrap img{
+  width:100%;
+  min-height:380px;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+
 .cta{
   padding:100px 0;
 }
@@ -293,10 +307,7 @@ footer{
 }
 
 @media(max-width:900px){
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
+  .hero-grid,
   .about{
     grid-template-columns:1fr;
   }
@@ -306,7 +317,8 @@ footer{
   }
 
   .hero-image img,
-  .about-img img{
+  .about-img img,
+  .banner-image-wrap img{
     min-height:420px;
   }
 
@@ -328,6 +340,7 @@ footer{
   .hero,
   #about,
   #services,
+  .banner-image-section,
   .cta,
   #why,
   #faq,
@@ -336,7 +349,8 @@ footer{
   }
 
   .hero-image img,
-  .about-img img{
+  .about-img img,
+  .banner-image-wrap img{
     min-height:320px;
   }
 

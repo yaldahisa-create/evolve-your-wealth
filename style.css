@@ -67,10 +67,17 @@ header{
 .brand{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
   font-weight:600;
-  letter-spacing:.02em;
+  font-size:1.05rem;
+  letter-spacing:.04em;
   flex-shrink:0;
+}
+
+.brand span{
+  font-family:"Cormorant Garamond", serif;
+  font-size:1.45rem;
+  letter-spacing:.05em;
 }
 
 .logo{
@@ -92,8 +99,8 @@ nav ul{
 
 nav a{
   color:#f1f1f1;
-  font-size:.92rem;
-  letter-spacing:.08em;
+  font-size:.88rem;
+  letter-spacing:.12em;
   text-transform:uppercase;
   transition:.25s ease;
 }
@@ -114,6 +121,7 @@ nav a:hover{
   transition:.25s ease;
   background:var(--gold);
   color:#111;
+  white-space:nowrap;
 }
 
 .btn:hover{
@@ -127,7 +135,7 @@ nav a:hover{
 }
 
 .hero{
-  padding:100px 0;
+  padding:120px 0;
 }
 
 .hero-grid{
@@ -169,7 +177,7 @@ nav a:hover{
 #why,
 #faq,
 #contact{
-  padding:100px 0;
+  padding:120px 0;
 }
 
 .about{
@@ -199,15 +207,24 @@ nav a:hover{
 }
 
 #services{
-  padding:100px 0;
+  padding:120px 0;
 }
 
 .section-title{
   font-family:"Cormorant Garamond", serif;
   font-size:clamp(2.2rem, 5vw, 3.3rem);
-  margin-bottom:40px;
+  margin-bottom:50px;
   line-height:1.08;
   max-width:760px;
+}
+
+.section-title::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:2px;
+  background:var(--gold);
+  margin-top:14px;
 }
 
 .services{
@@ -218,16 +235,16 @@ nav a:hover{
 
 .card{
   background:linear-gradient(180deg, var(--dark2), var(--dark3));
-  padding:28px 24px;
-  border-radius:18px;
+  padding:34px 28px;
+  border-radius:22px;
   border:1px solid rgba(255,255,255,0.06);
   box-shadow:var(--shadow);
-  transition:.25s ease;
+  transition:all .35s ease;
 }
 
 .card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(214,176,103,.28);
+  transform:translateY(-6px) scale(1.02);
+  border-color:rgba(214,176,103,.40);
 }
 
 .card h3{
@@ -242,7 +259,7 @@ nav a:hover{
 }
 
 .banner-image-section{
-  padding:20px 0 80px;
+  padding:20px 0 90px;
 }
 
 .banner-image-wrap img{
@@ -254,7 +271,7 @@ nav a:hover{
 }
 
 .cta{
-  padding:100px 0;
+  padding:120px 0;
 }
 
 .cta-box{

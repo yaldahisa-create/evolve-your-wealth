@@ -295,7 +295,7 @@ a {
   }
 }
 
-/* IMPACT CARDS */
+/* IMPACT */
 .impact-track .impact-card {
   min-width: 260px;
   max-width: 260px;
@@ -350,7 +350,7 @@ a {
   margin: 0 12px;
 }
 
-/* PREVIEW CARDS */
+/* EXPLORE EVOLVE */
 .preview-track .preview-card {
   min-width: 320px;
   max-width: 320px;
@@ -417,7 +417,7 @@ a {
   object-fit: contain;
 }
 
-/* ABOUT PAGE */
+/* ABOUT */
 .about-split {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
@@ -478,7 +478,7 @@ a {
   color: var(--muted);
 }
 
-/* SERVICES PAGE */
+/* SERVICES */
 .services-top-bar {
   background: #000;
   color: #fff;
@@ -487,7 +487,6 @@ a {
   font-size: 0.85rem;
   letter-spacing: 0.2em;
   font-weight: 600;
-  border-radius: 0;
 }
 
 .services-title {
@@ -577,7 +576,6 @@ a {
   font-size: 1.4rem;
 }
 
-/* WHAT ELSE WE OFFER BOX CARDS */
 .service-card {
   min-width: 260px;
   max-width: 260px;
@@ -591,9 +589,150 @@ a {
   border: 1px solid rgba(17, 17, 17, 0.08);
 }
 
-/* CONSULTATION / CTA */
+/* TEAM */
+.team-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.team-feature-card,
+.team-gallery-card {
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+}
+
+.team-feature-card img,
+.team-gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-feature-card img {
+  min-height: 520px;
+}
+
+.team-copy-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  padding: 34px;
+}
+
+.team-copy-card h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+  margin-bottom: 14px;
+}
+
+.team-copy-card p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.team-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 0.85fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.team-gallery-card {
+  min-height: 260px;
+}
+
+.team-gallery-card.large {
+  grid-row: span 2;
+  min-height: 540px;
+}
+
+.team-gallery-card.wide {
+  grid-column: span 2;
+  min-height: 260px;
+}
+
+.team-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.team-value-card {
+  border-radius: 28px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-value-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.team-value-card p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* PARTNERS PAGE */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.partner-card {
+  height: 130px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.15);
+}
+
+.partner-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.partner-inner img {
+  max-height: 50px;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+
+.partner-card:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.partner-inner span {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+/* CONSULTATION */
 .consultation-box,
-.services-cta-band {
+.services-cta-band,
+.consultation-bottom-band {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 30px;
@@ -601,7 +740,8 @@ a {
 }
 
 .consultation-box h2,
-.services-cta-band h2 {
+.services-cta-band h2,
+.consultation-bottom-band h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.3rem, 4vw, 4rem);
   line-height: 0.95;
@@ -613,10 +753,64 @@ a {
 }
 
 .consultation-actions,
-.services-actions {
+.services-actions,
+.consultation-page-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+.consultation-page-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.consultation-main-card,
+.consultation-side-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  padding: 34px;
+}
+
+.consultation-main-card h2,
+.consultation-side-card h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+  margin-bottom: 14px;
+}
+
+.consultation-main-card p,
+.consultation-side-card p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.consultation-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.consultation-step-card {
+  border-radius: 28px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.consultation-step-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.consultation-step-card p {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 /* FOOTER */
@@ -656,8 +850,28 @@ a {
   .about-split,
   .consultation-box,
   .services-clean-layout,
-  .services-cta-band {
+  .services-cta-band,
+  .team-layout,
+  .team-values-grid,
+  .consultation-page-layout,
+  .consultation-steps-grid,
+  .consultation-bottom-band {
     grid-template-columns: 1fr;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-gallery-card.large,
+  .team-gallery-card.wide {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 320px;
   }
 }
 
@@ -704,13 +918,16 @@ a {
 
   .hero-actions,
   .consultation-actions,
-  .services-actions {
+  .services-actions,
+  .consultation-page-actions {
     flex-direction: column;
   }
 
   .hero-actions .btn,
   .consultation-actions .btn,
-  .services-actions .btn {
+  .services-actions .btn,
+  .consultation-page-actions .btn,
+  .consultation-bottom-band .btn {
     width: 100%;
   }
 
@@ -738,7 +955,8 @@ a {
     animation-duration: 34s;
   }
 
-  .partners-logo-grid {
+  .partners-logo-grid,
+  .partners-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -758,5 +976,19 @@ a {
 
   .services-images img {
     height: 220px;
+  }
+
+  .team-feature-card img {
+    min-height: 320px;
+  }
+
+  .team-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-gallery-card,
+  .team-gallery-card.large,
+  .team-gallery-card.wide {
+    min-height: 260px;
   }
 }

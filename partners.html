@@ -3,59 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Partners | Evolve Insurance Agency</title>
-  <meta name="description" content="View Evolve Insurance Agency partners." />
+  <title>Partners | Evolve</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="brand-mini">EVOLVE</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
+
+      <a href="index.html" class="brand">
+        <img src="assets/evolve-logo.png" alt="Evolve logo" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
       <nav class="nav-links" id="mobileMenu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="team.html">Team</a>
         <a href="partners.html" class="active">Partners</a>
-        <a href="consultation.html" class="btn btn-gold">Book a Consultation</a>
+        <a href="consultation.html" class="btn btn-gold">Consultation</a>
       </nav>
+
     </div>
   </header>
 
-  <main>
-    <section class="section-light">
-      <div class="container">
-        <div class="section-heading center">
-          <span class="eyebrow">Partnerships</span>
-          <h1>Proud Partners</h1>
-          <p>Trusted relationships that strengthen the services and solutions available to Evolve clients.</p>
-        </div>
-
-        <div class="partners-grid">
-          <div class="partner-logo">National Life Group</div>
-          <div class="partner-logo">F&amp;G</div>
-          <div class="partner-logo">EquiTrust</div>
-          <div class="partner-logo">Lumico</div>
-          <div class="partner-logo">Prosperity Life Group</div>
-          <div class="partner-logo">Partner Logo</div>
-        </div>
+  <!-- HERO -->
+  <section class="section-light">
+    <div class="container">
+      <div class="section-heading center">
+        <span class="eyebrow">Our Network</span>
+        <h1>Trusted partners behind every solution.</h1>
+        <p>
+          We collaborate with leading financial and insurance carriers to deliver
+          secure, strategic, and long-term solutions tailored to your future.
+        </p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- PARTNERS GRID -->
+  <section class="section-plain">
+    <div class="container">
+
+      <div class="partners-grid">
+
+        <!-- Partner 1 -->
+        <a href="https://www.nationallife.com/" target="_blank" class="partner-card">
+          <div class="partner-inner">
+            <img src="assets/evolve-logo.png" alt="National Life Group" />
+            <span>National Life Group</span>
+          </div>
+        </a>
+
+        <!-- Partner 2 -->
+        <a href="https://www.fglife.com/" target="_blank" class="partner-card">
+          <div class="partner-inner">
+            <img src="assets/evolve-logo.png" alt="F&G Life" />
+            <span>F&G Life</span>
+          </div>
+        </a>
+
+        <!-- Partner 3 -->
+        <a href="https://www.equitrust.com/" target="_blank" class="partner-card">
+          <div class="partner-inner">
+            <img src="assets/evolve-logo.png" alt="Equitrust" />
+            <span>Equitrust</span>
+          </div>
+        </a>
+
+        <!-- Partner 4 -->
+        <a href="https://lumico.com/" target="_blank" class="partner-card">
+          <div class="partner-inner">
+            <img src="assets/evolve-logo.png" alt="Lumico" />
+            <span>Lumico</span>
+          </div>
+        </a>
+
+        <!-- Partner 5 -->
+        <a href="https://www.prosperitylife.com/" target="_blank" class="partner-card">
+          <div class="partner-inner">
+            <img src="assets/evolve-logo.png" alt="Prosperity Life" />
+            <span>Prosperity Life</span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-dark">
+    <div class="container services-cta-band">
+
+      <div>
+        <span class="eyebrow">Work With Us</span>
+        <h2>Let’s build a strategy backed by the right partners.</h2>
+      </div>
+
+      <div class="services-actions">
+        <a href="consultation.html" class="btn btn-gold">Book Consultation</a>
+        <a href="services.html" class="btn btn-outline-light">View Services</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-row">
-      <p>© 2026 Evolve Insurance Agency. All rights reserved.</p>
-      <p>Website designed by <a href="https://www.instagram.com/valenciadigitalstudio?igsh=MWRkOGlpdWNxNnF4ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Valencia Digital Studio</a></p>
+
+      <div class="footer-brand">
+        <img src="assets/evolve-logo.png" alt="Evolve logo" />
+      </div>
+
+      <div class="footer-copy">
+        <p>© 2026 Evolve Insurance Agency. All rights reserved.</p>
+        <p>
+          Website designed by
+          <a href="https://www.instagram.com/valenciadigitalstudio" target="_blank">
+            Valencia Digital Studio
+          </a>
+        </p>
+      </div>
+
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+    });
+  </script>
+
 </body>
 </html>

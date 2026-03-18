@@ -450,3 +450,128 @@ a {
     line-height: 1.5;
   }
 }
+/* ABOUT PAGE */
+.about-split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image-card {
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-copy h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 0.95;
+  margin-bottom: 10px;
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.mission-card {
+  border-radius: 28px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mission-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.mission-card p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.statement-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.statement-box {
+  border-radius: 28px;
+  padding: 34px;
+}
+
+.dark-box {
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.72), rgba(8, 8, 8, 0.72)),
+    url("assets/dark-texture.jpg") center/cover no-repeat;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.statement-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.statement-body {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.06rem;
+}
+
+.about-bottom-cta {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.about-bottom-cta h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+}
+
+.about-bottom-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .about-split,
+  .mission-grid,
+  .about-bottom-cta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-bottom-actions {
+    flex-direction: column;
+  }
+
+  .about-bottom-actions .btn {
+    width: 100%;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+}

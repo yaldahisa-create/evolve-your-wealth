@@ -4,221 +4,227 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evolve | Team</title>
+  <meta
+    name="description"
+    content="Meet the Evolve team and the people behind the mission."
+  />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="assets/evolve-logo.png" alt="Evolve logo" />
+      </a>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container nav">
-    
-    <div class="brand">
-      <img src="assets/logo.png" alt="Evolve Logo" />
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="partners.html">Partners</a>
+        <a href="consultation.html" class="btn btn-gold">Book a Consultation</a>
+      </nav>
     </div>
+  </header>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="team.html" class="active">Team</a>
-      <a href="contact.html" class="btn btn-gold">Book a Consultation</a>
-    </nav>
+  <main>
+    <section class="section-light">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow">The Team</span>
+          <h1>The people behind the mission.</h1>
+          <p>
+            Evolve is built by a community of professionals committed to serving
+            families, growing with purpose, and helping others move with clarity,
+            confidence, and long-term vision.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <section class="section-plain">
+      <div class="container team-layout">
+        <div class="team-feature-card">
+          <img src="assets/team-1.jpg" alt="Evolve team featured photo" />
+        </div>
 
-  </div>
-</header>
+        <div class="team-copy-card">
+          <span class="eyebrow">Community</span>
+          <h2>Built on growth, service, and leadership.</h2>
+          <p>
+            Evolve team members come from diverse backgrounds but share a common
+            mission: to serve with integrity, educate with care, and build a
+            lasting impact through meaningful financial guidance.
+          </p>
+          <p>
+            More than a business, this is a culture of development, support,
+            and purpose-driven leadership.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- FOUNDER SECTION -->
-<section class="section-plain">
-  <div class="container about-split">
+    <section class="section-light">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow">Gallery</span>
+          <h2>A closer look at the Evolve team.</h2>
+        </div>
 
-    <div class="about-image-card">
-      <img src="assets/founder.jpg" alt="Founder" />
-    </div>
+        <div class="team-gallery-grid">
+          <div class="team-gallery-card card-a">
+            <img src="assets/team-2.jpg" alt="Evolve team photo 2" />
+          </div>
 
-    <div class="about-copy">
-      <span class="eyebrow">Founder</span>
-      <h2>Evolve Founder</h2>
-      <div class="script-text">Justina Lorico</div>
+          <div class="team-gallery-card card-b">
+            <img src="assets/team-3.jpg" alt="Evolve team photo 3" />
+          </div>
 
-      <p>
-        Justina Lorico is the Founder of Evolve Insurance Agency, driven by a passion
-        to help families and entrepreneurs build financial security and lasting legacies.
-      </p>
+          <div class="team-gallery-card card-c">
+            <img src="assets/team-4.jpg" alt="Evolve team photo 4" />
+          </div>
 
-      <p>
-        Through years of experience and leadership, she has developed a deep commitment
-        to educating others, empowering communities, and helping individuals grow with
-        confidence and clarity.
-      </p>
+          <div class="team-gallery-card card-d">
+            <img src="assets/team-5.jpg" alt="Evolve team photo 5" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <p>
-        Today, her mission continues through mentorship, financial strategies,
-        and a vision to transform lives through purpose and leadership.
-      </p>
-    </div>
+    <section class="section-dark">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow">What Defines Us</span>
+          <h2>A team committed to impact.</h2>
+        </div>
 
-  </div>
-</section>
+        <div class="slider-shell">
+          <div class="slider-track slider-right team-values-track">
+            <article class="team-value-card">
+              <h3>Integrity</h3>
+              <p>
+                We believe trust is built through honesty, consistency, and the way
+                we show up for the people we serve.
+              </p>
+            </article>
 
-<!-- TEAM FEATURE -->
-<section class="section-plain">
-  <div class="container team-layout">
+            <article class="team-value-card">
+              <h3>Service</h3>
+              <p>
+                We lead with care, creating experiences that feel personal,
+                thoughtful, and centered on real needs.
+              </p>
+            </article>
 
-    <div class="team-feature-card">
-      <img src="assets/team-1.jpg" alt="Evolve team" />
-    </div>
+            <article class="team-value-card">
+              <h3>Growth</h3>
+              <p>
+                We are committed to personal development, leadership, and building
+                something that creates lasting value for others.
+              </p>
+            </article>
 
-    <div class="team-copy-card">
-      <span class="eyebrow">Community</span>
-      <h2>Built on growth, service, and leadership.</h2>
+            <article class="team-value-card">
+              <h3>Integrity</h3>
+              <p>
+                We believe trust is built through honesty, consistency, and the way
+                we show up for the people we serve.
+              </p>
+            </article>
 
-      <p>
-        Evolve agents are a community of growth-driven professionals committed to
-        serving families through financial education and protection strategies.
-      </p>
+            <article class="team-value-card">
+              <h3>Service</h3>
+              <p>
+                We lead with care, creating experiences that feel personal,
+                thoughtful, and centered on real needs.
+              </p>
+            </article>
 
-      <p>
-        We come from diverse backgrounds, yet we share one mission:
-        to build wealth, protect futures, and create generational impact.
-      </p>
-    </div>
+            <article class="team-value-card">
+              <h3>Growth</h3>
+              <p>
+                We are committed to personal development, leadership, and building
+                something that creates lasting value for others.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <section class="section-plain">
+      <div class="container consultation-box">
+        <div>
+          <span class="eyebrow">Continue Exploring</span>
+          <h2>Discover the services and partnerships behind the Evolve experience.</h2>
+          <p>
+            Learn more about the solutions, relationships, and consultation
+            experience that support the Evolve mission.
+          </p>
+        </div>
 
-<!-- TEAM GALLERY -->
-<section class="section-light">
-  <div class="container">
+        <div class="consultation-actions">
+          <a href="services.html" class="btn btn-gold">View Services</a>
+          <a href="partners.html" class="btn btn-outline">View Partners</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <div class="section-heading center">
-      <span class="eyebrow">The Team</span>
-      <h2>A closer look at the Evolve family.</h2>
-    </div>
-
-    <div class="team-gallery-grid">
-
-      <div class="team-gallery-card large">
-        <img src="assets/team-2.jpg" alt="Team photo 2" />
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <img src="assets/evolve-logo.png" alt="Evolve logo" />
       </div>
 
-      <div class="team-gallery-card">
-        <img src="assets/team-3.jpg" alt="Team photo 3" />
-      </div>
-
-      <div class="team-gallery-card">
-        <img src="assets/team-4.jpg" alt="Team photo 4" />
-      </div>
-
-      <div class="team-gallery-card wide">
-        <img src="assets/team-5.jpg" alt="Team photo 5" />
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- VALUES -->
-<section class="section-dark">
-  <div class="container">
-
-    <div class="section-heading center">
-      <span class="eyebrow">Values</span>
-      <h2>What we stand for</h2>
-    </div>
-
-    <div class="slider-shell">
-      <div class="slider-track slider-right team-values-track">
-
-        <div class="team-value-card">
-          <h3>Grow</h3>
-          <p>We commit to continuous personal and professional development.</p>
-        </div>
-
-        <div class="team-value-card">
-          <h3>Serve</h3>
-          <p>We prioritize people, relationships, and meaningful impact.</p>
-        </div>
-
-        <div class="team-value-card">
-          <h3>Lead</h3>
-          <p>We lead with integrity, vision, and purpose-driven action.</p>
-        </div>
-
-        <!-- duplicate for infinite scroll -->
-        <div class="team-value-card">
-          <h3>Grow</h3>
-          <p>We commit to continuous personal and professional development.</p>
-        </div>
-
-        <div class="team-value-card">
-          <h3>Serve</h3>
-          <p>We prioritize people, relationships, and meaningful impact.</p>
-        </div>
-
-        <div class="team-value-card">
-          <h3>Lead</h3>
-          <p>We lead with integrity, vision, and purpose-driven action.</p>
-        </div>
-
+      <div class="footer-copy">
+        <p>© 2026 Evolve Insurance Agency. All rights reserved.</p>
+        <p>
+          Website designed by
+          <a
+            href="https://www.instagram.com/valenciadigitalstudio?igsh=MWRkOGlpdWNxNnF4ZQ%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener"
+          >
+            Valencia Digital Studio
+          </a>
+        </p>
       </div>
     </div>
+  </footer>
 
-  </div>
-</section>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-<!-- CTA -->
-<section class="section-plain">
-  <div class="container consultation-box">
-
-    <div>
-      <h2>Ready to grow with us?</h2>
-      <p>
-        Join a team that is built on purpose, leadership, and real impact.
-      </p>
-    </div>
-
-    <div class="consultation-actions">
-      <a href="contact.html" class="btn btn-gold">Book Consultation</a>
-      <a href="services.html" class="btn btn-outline">Explore Services</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-row">
-
-    <div class="footer-brand">
-      <img src="assets/logo.png" alt="Evolve Logo" />
-    </div>
-
-    <div class="footer-copy">
-      <p>© Evolve Insurance Agency. All rights reserved.</p>
-    </div>
-
-  </div>
-</footer>
-
-<!-- JS -->
-<script>
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
-}
-</script>
-
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!expanded));
+      });
+    }
+  </script>
 </body>
 </html>

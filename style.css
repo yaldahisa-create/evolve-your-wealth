@@ -1,17 +1,17 @@
 :root {
-  --bg: #0b0b0d;
-  --bg-soft: #111214;
-  --text: #ffffff;
-  --muted: rgba(255, 255, 255, 0.78);
-  --line: rgba(255, 255, 255, 0.12);
+  --bg: #f3f1ed;
+  --bg-soft: #faf8f4;
+  --text: #111111;
+  --muted: #555555;
+  --line: rgba(17, 17, 17, 0.1);
 
   --black: #050505;
   --white: #ffffff;
   --gold: #c8943e;
   --gold-soft: #d8ad69;
 
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
-  --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.18);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+  --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.08);
   --radius: 28px;
   --max-width: 1180px;
 }
@@ -28,9 +28,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background:
-    linear-gradient(rgba(8, 8, 8, 0.78), rgba(8, 8, 8, 0.78)),
-    url("assets/black-texture.jpg") center/cover fixed;
+  background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -142,10 +140,9 @@ a {
 }
 
 .btn-outline {
-  border-color: rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--white) !important;
-  backdrop-filter: blur(8px);
+  border-color: rgba(17, 17, 17, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--text) !important;
 }
 
 .btn-outline-light {
@@ -155,19 +152,16 @@ a {
 }
 
 /* SECTIONS */
-.section-light,
-.section-plain {
-  background:
-    linear-gradient(rgba(8, 8, 8, 0.82), rgba(8, 8, 8, 0.82)),
-    url("assets/black-texture.jpg") center/cover no-repeat;
-}
-
 .section-light {
   padding: 96px 0;
+  background: var(--bg);
 }
 
 .section-plain {
   padding: 58px 0;
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.78), rgba(8, 8, 8, 0.78)),
+    url("assets/black-texture.jpg") center/cover no-repeat;
 }
 
 .section-dark {
@@ -193,19 +187,35 @@ a {
   line-height: 0.95;
   margin-bottom: 14px;
   letter-spacing: -0.02em;
+}
+
+.section-light .section-heading h1,
+.section-light .section-heading h2 {
+  color: var(--text);
+}
+
+.section-plain .section-heading h1,
+.section-plain .section-heading h2,
+.section-dark .section-heading h1,
+.section-dark .section-heading h2 {
   color: var(--white);
 }
 
-.section-heading p,
-.section-light p,
-.section-plain p {
+.section-heading p {
   max-width: 860px;
   margin: 0 auto;
-  color: rgba(255, 255, 255, 0.85);
 }
 
-.section-dark .section-heading p {
-  color: rgba(255, 255, 255, 0.86);
+.section-light .section-heading p,
+.section-light p {
+  color: var(--muted);
+}
+
+.section-plain .section-heading p,
+.section-plain p,
+.section-dark .section-heading p,
+.section-dark p {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .eyebrow {
@@ -231,9 +241,7 @@ a {
   position: relative;
   overflow: hidden;
   text-align: center;
-  background:
-    linear-gradient(rgba(8, 8, 8, 0.65), rgba(8, 8, 8, 0.65)),
-    url("assets/black-texture.jpg") center/cover no-repeat;
+  background: var(--bg);
 }
 
 .hero-inner {
@@ -311,7 +319,7 @@ a {
   }
 }
 
-/* GLASS CARDS */
+/* LIGHT GLASS CARDS */
 .preview-card,
 .about-slide-card,
 .team-copy-card,
@@ -319,9 +327,9 @@ a {
 .consultation-side-card,
 .partner-card,
 .partner-logo-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  backdrop-filter: blur(8px);
 }
 
 /* IMPACT */
@@ -380,7 +388,7 @@ a {
   margin: 0 12px;
 }
 
-/* EXPLORE EVOLVE */
+/* PREVIEW CARDS */
 .preview-track .preview-card {
   min-width: 320px;
   max-width: 320px;
@@ -402,11 +410,11 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   margin-bottom: 10px;
-  color: var(--white);
+  color: var(--text);
 }
 
 .preview-card p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
 }
 
 /* HOMEPAGE PARTNERS */
@@ -490,11 +498,11 @@ a {
   font-size: clamp(2.3rem, 4vw, 4rem);
   line-height: 0.95;
   margin-bottom: 10px;
-  color: var(--white);
+  color: var(--text);
 }
 
 .about-copy p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
   margin-bottom: 14px;
 }
 
@@ -519,11 +527,11 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   margin-bottom: 10px;
-  color: var(--white);
+  color: var(--text);
 }
 
 .about-slide-card p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
 }
 
 /* SERVICES */
@@ -679,11 +687,11 @@ a {
   font-size: clamp(2.3rem, 4vw, 4rem);
   line-height: 0.95;
   margin-bottom: 14px;
-  color: var(--white);
+  color: var(--text);
 }
 
 .team-copy-card p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
   margin-bottom: 14px;
   font-size: 1.03rem;
 }
@@ -806,7 +814,7 @@ a {
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  color: #777;
   text-align: center;
 }
 
@@ -827,6 +835,17 @@ a {
   font-size: clamp(2.3rem, 4vw, 4rem);
   line-height: 0.95;
   margin-bottom: 14px;
+}
+
+.section-light .consultation-box h2,
+.section-light .services-cta-band h2,
+.section-light .consultation-bottom-band h2 {
+  color: var(--text);
+}
+
+.section-dark .consultation-box h2,
+.section-dark .services-cta-band h2,
+.section-dark .consultation-bottom-band h2 {
   color: var(--white);
 }
 
@@ -862,12 +881,12 @@ a {
   font-size: clamp(2.2rem, 4vw, 3.8rem);
   line-height: 0.95;
   margin-bottom: 14px;
-  color: var(--white);
+  color: var(--text);
 }
 
 .consultation-main-card p,
 .consultation-side-card p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
   margin-bottom: 16px;
 }
 
@@ -902,10 +921,8 @@ a {
 /* FOOTER */
 .site-footer {
   padding: 30px 0 42px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background:
-    linear-gradient(rgba(8, 8, 8, 0.86), rgba(8, 8, 8, 0.86)),
-    url("assets/black-texture.jpg") center/cover no-repeat;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  background: var(--bg-soft);
 }
 
 .footer-row {
@@ -922,7 +939,7 @@ a {
 }
 
 .footer-copy p {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
 }
 
 .footer-copy a {
@@ -964,12 +981,6 @@ a {
 }
 
 @media (max-width: 760px) {
-  body {
-    background:
-      linear-gradient(rgba(8, 8, 8, 0.85), rgba(8, 8, 8, 0.85)),
-      url("assets/black-texture.jpg") center/cover fixed;
-  }
-
   .menu-toggle {
     display: inline-flex;
   }

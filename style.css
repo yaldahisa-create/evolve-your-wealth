@@ -29,7 +29,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   background:
-    linear-gradient(rgba(243, 241, 237, 0.92), rgba(243, 241, 237, 0.92)),
+    linear-gradient(rgba(243, 241, 237, 0.94), rgba(243, 241, 237, 0.94)),
     url("assets/light-texture.jpg") center/cover fixed;
   color: var(--text);
   line-height: 1.6;
@@ -61,7 +61,7 @@ a {
 }
 
 .nav {
-  min-height: 82px;
+  min-height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,7 +70,7 @@ a {
 
 .brand img,
 .logo {
-  height: 20px;
+  height: 42px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -156,19 +156,23 @@ a {
 /* SECTIONS */
 .section-light {
   padding: 96px 0;
-  background: transparent;
+  background:
+    linear-gradient(rgba(250, 248, 244, 0.88), rgba(250, 248, 244, 0.88)),
+    url("assets/light-texture.jpg") center/cover no-repeat;
 }
 
 .section-plain {
   padding: 58px 0;
-  background: transparent;
+  background:
+    linear-gradient(rgba(243, 241, 237, 0.88), rgba(243, 241, 237, 0.88)),
+    url("assets/light-texture.jpg") center/cover no-repeat;
 }
 
 .section-dark {
   padding: 96px 0;
   color: var(--white);
   background:
-    linear-gradient(rgba(8, 8, 8, 0.7), rgba(8, 8, 8, 0.7)),
+    linear-gradient(rgba(8, 8, 8, 0.72), rgba(8, 8, 8, 0.72)),
     url("assets/dark-texture.jpg") center/cover no-repeat;
 }
 
@@ -224,15 +228,6 @@ a {
   text-align: center;
 }
 
-.hero-bg-logo {
-  position: absolute;
-  inset: 0;
-  background: url("assets/eagle.png") center/700px no-repeat;
-  opacity: 0.035;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -240,6 +235,25 @@ a {
 
 .hero-logo-wrap {
   margin-bottom: 42px;
+}
+
+.hero-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.hero-eagle {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hero-logo-main {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
 }
 
 .hero-logo {
@@ -350,14 +364,14 @@ a {
   margin: 0 12px;
 }
 
-/* EXPLORE EVOLVE */
+/* PREVIEW CARDS */
 .preview-track .preview-card {
   min-width: 320px;
   max-width: 320px;
 }
 
 .preview-card {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 28px;
   box-shadow: var(--shadow-soft);
@@ -395,7 +409,7 @@ a {
 
 .partner-logo-card {
   min-height: 120px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 24px;
   box-shadow: var(--shadow-soft);
@@ -406,6 +420,7 @@ a {
   transition: 0.25s ease;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(8px);
 }
 
 .partner-logo-card::after,
@@ -477,12 +492,13 @@ a {
 }
 
 .about-slide-card {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 28px;
   box-shadow: var(--shadow-soft);
   padding: 32px;
   transition: 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
 .about-slide-card:hover {
@@ -639,7 +655,7 @@ a {
 }
 
 .team-copy-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 32px;
   box-shadow: var(--shadow-soft);
@@ -647,6 +663,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  backdrop-filter: blur(8px);
 }
 
 .team-copy-card h2 {
@@ -741,7 +758,7 @@ a {
 .partner-card {
   height: 130px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(17, 17, 17, 0.08);
   box-shadow: var(--shadow-soft);
   display: flex;
@@ -750,6 +767,7 @@ a {
   transition: 0.3s ease;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(8px);
 }
 
 .partner-card:hover {
@@ -825,11 +843,12 @@ a {
 
 .consultation-main-card,
 .consultation-side-card {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 28px;
   box-shadow: var(--shadow-soft);
   padding: 34px;
+  backdrop-filter: blur(8px);
 }
 
 .consultation-main-card h2,
@@ -877,7 +896,9 @@ a {
 .site-footer {
   padding: 30px 0 42px;
   border-top: 1px solid rgba(17, 17, 17, 0.08);
-  background: var(--bg-soft);
+  background:
+    linear-gradient(rgba(250, 248, 244, 0.9), rgba(250, 248, 244, 0.9)),
+    url("assets/light-texture.jpg") center/cover no-repeat;
 }
 
 .footer-row {
@@ -942,7 +963,7 @@ a {
 
   .brand img,
   .logo {
-    height: 18px;
+    height: 24px;
   }
 
   .nav-links {
@@ -976,6 +997,19 @@ a {
     padding: 70px 0;
   }
 
+  .hero-logo-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-eagle {
+    height: 48px;
+  }
+
+  .hero-logo-main {
+    height: 64px;
+  }
+
   .hero-actions,
   .consultation-actions,
   .services-actions,
@@ -989,10 +1023,6 @@ a {
   .consultation-page-actions .btn,
   .consultation-bottom-band .btn {
     width: 100%;
-  }
-
-  .hero-bg-logo {
-    background-size: 420px;
   }
 
   .impact-track .impact-card {

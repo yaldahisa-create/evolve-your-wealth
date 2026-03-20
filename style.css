@@ -346,15 +346,50 @@ a {
   margin: 0 12px;
 }
 
-/* BLUE CARDS */
-.preview-card,
-.about-slide-card {
-  min-width: 300px;
+/* SMALLER SLIDER CARDS */
+.preview-card {
+  min-width: 250px;
+  max-width: 250px;
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 22px;
   box-shadow: var(--shadow-soft);
 }
 
+.about-slide-card {
+  min-width: 255px;
+  max-width: 255px;
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.team-value-card {
+  min-width: 255px;
+  max-width: 255px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border-radius: 28px;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+}
+
+.preview-card h3,
+.about-slide-card h3,
+.team-value-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.preview-card p,
+.about-slide-card p,
+.team-value-card p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* BLUE CARDS */
 .preview-blue,
 .about-blue {
   background: linear-gradient(180deg, var(--blue), var(--blue-dark));
@@ -366,13 +401,6 @@ a {
 .about-blue h3,
 .about-blue p {
   color: white;
-}
-
-.preview-card h3,
-.about-slide-card h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  margin-bottom: 10px;
 }
 
 /* PARTNERS */
@@ -609,24 +637,6 @@ a {
   min-height: 580px;
 }
 
-.team-value-card,
-.consultation-step-card {
-  min-width: 300px;
-  background: rgba(255,255,255,0.08);
-  color: white;
-  border-radius: 28px;
-  padding: 28px;
-  border: 1px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(10px);
-}
-
-.team-value-card h3,
-.consultation-step-card h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
 /* CONSULTATION */
 .consultation-box,
 .consultation-page-layout {
@@ -647,11 +657,32 @@ a {
 
 .consultation-main-card h2,
 .consultation-side-card h2,
-.consultation-box h2 {
+.consultation-box h2,
+.consultation-step-card h3 {
   font-family: "Cormorant Garamond", serif;
+}
+
+.consultation-main-card h2,
+.consultation-side-card h2,
+.consultation-box h2 {
   font-size: clamp(2.2rem, 4vw, 3.8rem);
   line-height: 0.95;
   margin-bottom: 14px;
+}
+
+.consultation-step-card {
+  min-width: 300px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border-radius: 28px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+}
+
+.consultation-step-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .consultation-actions,
@@ -820,12 +851,37 @@ a {
     min-height: 300px;
   }
 
-  .preview-card,
+  .preview-card {
+    min-width: 250px;
+    max-width: 250px;
+    padding: 22px;
+  }
+
   .about-slide-card,
-  .team-value-card,
+  .team-value-card {
+    min-width: 255px;
+    max-width: 255px;
+    padding: 22px;
+  }
+
   .consultation-step-card,
   .service-card {
-    min-width: 280px;
+    min-width: 240px;
+    max-width: 240px;
+  }
+
+  .preview-card h3,
+  .about-slide-card h3,
+  .team-value-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+  }
+
+  .preview-card p,
+  .about-slide-card p,
+  .team-value-card p {
+    font-size: 0.92rem;
+    line-height: 1.5;
   }
 
   .slider-right {

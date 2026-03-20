@@ -10,6 +10,8 @@
   --white: #ffffff;
   --gold: #c88e3a;
   --gold-soft: #d7a35d;
+  --blue-card: #4968a6;
+  --blue-card-dark: #35548f;
 
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
   --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.08);
@@ -92,6 +94,11 @@ a {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--white);
+}
+
+.nav-cta {
+  min-height: 44px;
+  padding: 0 18px;
 }
 
 .menu-toggle {
@@ -234,9 +241,9 @@ a {
 .script-text {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  color: var(--gold);
   font-size: clamp(1.8rem, 2vw, 2.5rem);
   line-height: 1.1;
+  color: var(--gold);
 }
 
 /* HERO */
@@ -275,6 +282,10 @@ a {
   height: 90px;
   width: auto;
   object-fit: contain;
+}
+
+.hero-script {
+  color: var(--gold);
 }
 
 .hero-copy {
@@ -381,6 +392,12 @@ a {
   text-align: center;
 }
 
+.light-band {
+  background:
+    linear-gradient(rgba(247, 246, 243, 0.95), rgba(247, 246, 243, 0.95)),
+    url("assets/light-texture.jpg") center/cover no-repeat;
+}
+
 .value-band p {
   font-size: clamp(1.7rem, 3vw, 2.6rem);
   color: var(--gold);
@@ -415,11 +432,20 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   margin-bottom: 10px;
-  color: var(--text);
 }
 
 .preview-card p {
-  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.preview-blue {
+  background: linear-gradient(180deg, var(--blue-card), var(--blue-card-dark));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.preview-blue h3,
+.preview-blue p {
+  color: var(--white);
 }
 
 /* HOMEPAGE PARTNERS */
@@ -532,11 +558,20 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   margin-bottom: 10px;
-  color: var(--text);
 }
 
 .about-slide-card p {
-  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.about-blue {
+  background: linear-gradient(180deg, var(--blue-card), var(--blue-card-dark));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-blue h3,
+.about-blue p {
+  color: var(--white);
 }
 
 /* SERVICES */
@@ -703,23 +738,34 @@ a {
 
 .team-gallery-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr 0.85fr;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-template-areas:
+    "a b c"
+    "a d d";
   gap: 20px;
   align-items: stretch;
 }
+
+.card-a { grid-area: a; }
+.card-b { grid-area: b; }
+.card-c { grid-area: c; }
+.card-d { grid-area: d; }
 
 .team-gallery-card {
   overflow: hidden;
   border-radius: 28px;
   box-shadow: var(--shadow-soft);
-  min-height: 280px;
   background: #ddd;
+  min-height: 280px;
 }
 
 .team-gallery-card img {
   width: 100%;
   height: 100%;
+  min-height: 280px;
   object-fit: cover;
+  object-position: center;
+  display: block;
   transition: transform 0.45s ease;
 }
 
@@ -727,13 +773,13 @@ a {
   transform: scale(1.05);
 }
 
-.team-gallery-card.large {
-  grid-row: span 2;
+.card-a,
+.card-a img {
   min-height: 580px;
 }
 
-.team-gallery-card.wide {
-  grid-column: span 2;
+.card-d,
+.card-d img {
   min-height: 280px;
 }
 
@@ -844,7 +890,10 @@ a {
 
 .section-light .consultation-box h2,
 .section-light .services-cta-band h2,
-.section-light .consultation-bottom-band h2 {
+.section-light .consultation-bottom-band h2,
+.section-plain .consultation-box h2,
+.section-plain .services-cta-band h2,
+.section-plain .consultation-bottom-band h2 {
   color: var(--text);
 }
 
@@ -970,12 +1019,21 @@ a {
 
   .team-gallery-grid {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c d";
   }
 
-  .team-gallery-card.large,
-  .team-gallery-card.wide {
-    grid-column: auto;
-    grid-row: auto;
+  .card-a,
+  .card-b,
+  .card-c,
+  .card-d,
+  .card-a img,
+  .card-b img,
+  .card-c img,
+  .card-d img,
+  .team-feature-card,
+  .team-feature-card img {
     min-height: 320px;
   }
 
@@ -1106,11 +1164,21 @@ a {
 
   .team-gallery-grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
   }
 
-  .team-gallery-card,
-  .team-gallery-card.large,
-  .team-gallery-card.wide {
+  .card-a,
+  .card-b,
+  .card-c,
+  .card-d,
+  .card-a img,
+  .card-b img,
+  .card-c img,
+  .card-d img {
     min-height: 240px;
   }
 }

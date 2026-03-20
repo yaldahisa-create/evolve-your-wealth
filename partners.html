@@ -4,60 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Partners | Evolve Insurance Agency</title>
-  <meta
-    name="description"
-    content="Explore the trusted insurance and financial partners that support the Evolve experience."
-  />
-
+  <meta name="description" content="Explore the trusted insurance and financial partners that support the Evolve experience." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a href="index.html" class="brand brand-lockup">
-      <img src="assets/eagle.png" alt="Evolve Eagle" class="brand-eagle" />
-      <img src="assets/evolve-logo.png" alt="Evolve logo" class="brand-logo" />
-    </a>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand-lockup">
+        <img src="assets/eagle.png" alt="Evolve Eagle" class="brand-eagle" />
+        <img src="assets/evolve-logo.png" alt="Evolve logo" class="brand-logo" />
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="partners.html" class="active">Partners</a>
+        <a href="consultation.html" class="btn btn-gold nav-cta">Book a Consultation</a>
+      </nav>
+    </div>
+  </header>
 
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      aria-label="Open menu"
-      aria-expanded="false"
-      aria-controls="mobileMenu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="nav-links" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="team.html">Team</a>
-      <a href="partners.html">Partners</a>
-      <a href="consultation.html" class="btn btn-gold nav-cta">Book a Consultation</a>
-    </nav>
-  </div>
-</header>
   <main>
     <section class="section-light">
       <div class="container">
         <div class="section-heading center">
           <span class="eyebrow">Our Partners</span>
           <h1>Trusted carriers behind every solution.</h1>
-          <p>
-            We collaborate with respected insurance and financial partners to provide
-            secure, strategic, and long-term solutions tailored to your future.
-          </p>
+          <p>We collaborate with respected insurance and financial partners to provide secure, strategic, and long-term solutions tailored to your future.</p>
         </div>
       </div>
     </section>
@@ -108,12 +88,8 @@
         <div>
           <span class="eyebrow">Backed By Experience</span>
           <h2>Partnerships that strengthen trust and long-term strategy.</h2>
-          <p>
-            These relationships allow Evolve to offer solutions with more depth,
-            flexibility, and confidence — helping clients move forward with greater clarity.
-          </p>
+          <p>These relationships allow Evolve to offer solutions with more depth, flexibility, and confidence.</p>
         </div>
-
         <div class="consultation-actions">
           <a href="services.html" class="btn btn-gold">View Services</a>
           <a href="consultation.html" class="btn btn-outline-light">Book a Consultation</a>
@@ -124,22 +100,10 @@
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <div class="footer-brand">
-        <img src="assets/evolve-logo.png" alt="Evolve logo" />
-      </div>
-
+      <div class="footer-brand"><img src="assets/evolve-logo.png" alt="Evolve logo" /></div>
       <div class="footer-copy">
         <p>© 2026 Evolve Insurance Agency. All rights reserved.</p>
-        <p>
-          Website designed by
-          <a
-            href="https://www.instagram.com/valenciadigitalstudio?igsh=MWRkOGlpdWNxNnF4ZQ%3D%3D&utm_source=qr"
-            target="_blank"
-            rel="noopener"
-          >
-            Valencia Digital Studio
-          </a>
-        </p>
+        <p>Website designed by <a href="https://www.instagram.com/valenciadigitalstudio?igsh=MWRkOGlpdWNxNnF4ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Valencia Digital Studio</a></p>
       </div>
     </div>
   </footer>
@@ -147,7 +111,6 @@
   <script>
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
-
     if (menuToggle && mobileMenu) {
       menuToggle.addEventListener("click", () => {
         mobileMenu.classList.toggle("show");

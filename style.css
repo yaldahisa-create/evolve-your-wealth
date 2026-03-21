@@ -1,3 +1,13 @@
+Absolutely — here is the **full rewritten `style.css`** with the **header logo resized** to feel closer to the reference you showed:
+
+* **desktop header height:** cleaner and tighter
+* **desktop logo size:** slightly bigger, but still balanced
+* **mobile logo size:** adjusted too
+* keeps your current luxury layout, typography, sliders, and card sizing
+
+## `style.css`
+
+```css
 :root {
   --bg: #f4f2ee;
   --panel: #ffffff;
@@ -62,7 +72,7 @@ a {
 }
 
 .nav {
-  min-height: 84px;
+  min-height: 78px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +86,7 @@ a {
 }
 
 .brand-logo-single {
-  height: 42px;
+  height: 46px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -278,6 +288,12 @@ a {
   object-fit: contain;
 }
 
+.hero-logo-single {
+  width: min(520px, 92%);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 .hero-script {
   color: var(--gold);
   margin-top: 14px;
@@ -349,304 +365,5 @@ a {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 8px;
-  line-height: 1.1;
-}
-
-.impact-card span {
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-/* VALUE BAND */
-.value-band {
-  text-align: center;
-}
-
-.value-band p {
-  font-size: clamp(1.55rem, 2.7vw, 2.25rem);
-  color: var(--gold);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.value-band span {
-  margin: 0 12px;
-}
-
-/* SMALLER SLIDER CARDS */
-.preview-card {
-  min-width: 250px;
-  max-width: 250px;
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow-soft);
-}
-
-.about-slide-card {
-  min-width: 255px;
-  max-width: 255px;
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: var(--shadow-soft);
-}
-
-.team-value-card {
-  min-width: 255px;
-  max-width: 255px;
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
-  border-radius: 28px;
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-}
-
-.preview-card h3,
-.about-slide-card h3,
-.team-value-card h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.85rem;
-  font-weight: 600;
-  line-height: 1.05;
-  margin-bottom: 10px;
-}
-
-.preview-card p,
-.about-slide-card p,
-.team-value-card p {
-  font-size: 0.92rem;
-  line-height: 1.65;
-}
-
-/* BLUE CARDS */
-.preview-blue,
-.about-blue {
-  background: linear-gradient(180deg, var(--blue), var(--blue-dark));
-  color: white;
-}
-
-.preview-blue h3,
-.preview-blue p,
-.about-blue h3,
-.about-blue p {
-  color: white;
-}
-
-/* PARTNERS */
-.homepage-partners {
-  padding-top: 24px;
-}
-
-.partners-logo-grid,
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
-}
-
-.partner-logo-card,
-.partner-card {
-  background: white;
-  padding: 20px;
-  border-radius: var(--radius);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: var(--shadow-soft);
-  transition: 0.25s ease;
-}
-
-.partner-logo-card:hover,
-.partner-card:hover {
-  transform: translateY(-4px);
-}
-
-.partner-logo-card img,
-.partner-inner img {
-  max-height: 52px;
-  object-fit: contain;
-}
-
-.partner-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.partner-inner span {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #777;
-  text-align: center;
-}
-
-/* CONSULTATION */
-.consultation-box {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 30px;
-  align-items: center;
-}
-
-.consultation-box h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.3rem, 4vw, 4rem);
-  line-height: 0.95;
-  margin-bottom: 14px;
-}
-
-.consultation-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-/* FOOTER */
-.site-footer {
-  padding: 34px 0;
-  background: #f1f1f1;
-}
-
-.footer-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.footer-brand img {
-  height: 36px;
-  width: auto;
-  object-fit: contain;
-}
-
-.footer-copy p {
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.footer-copy a {
-  color: var(--gold);
-}
-
-/* MOBILE */
-@media (max-width: 1024px) {
-  .partners-logo-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .consultation-box {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    right: 10px;
-    top: 90px;
-    background: black;
-    padding: 20px;
-    border-radius: 12px;
-    width: min(300px, calc(100vw - 32px));
-    z-index: 1001;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a,
-  .nav-links .btn {
-    width: 100%;
-  }
-
-  .brand-logo-single {
-    height: 32px;
-  }
-
-  .nav {
-    min-height: 76px;
-  }
-
-  .hero-section {
-    padding-top: 110px;
-    padding-bottom: 90px;
-  }
-
-  .hero-logo-row {
-    gap: 10px;
-  }
-
-  .hero-eagle {
-    height: 52px;
-  }
-
-  .hero-logo-main {
-    height: 68px;
-  }
-
-  .hero-lead,
-  .hero-subtext {
-    font-size: 0.96rem;
-  }
-
-  .hero-actions,
-  .consultation-actions {
-    flex-direction: column;
-  }
-
-  .hero-actions .btn,
-  .consultation-actions .btn {
-    width: 100%;
-  }
-
-  .partners-logo-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .preview-card {
-    min-width: 250px;
-    max-width: 250px;
-    padding: 22px;
-  }
-
-  .about-slide-card,
-  .team-value-card {
-    min-width: 255px;
-    max-width: 255px;
-    padding: 22px;
-  }
-
-  .preview-card h3,
-  .about-slide-card h3,
-  .team-value-card h3 {
-    font-size: 1.7rem;
-  }
-
-  .preview-card p,
-  .about-slide-card p,
-  .team-value-card p {
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-
-  .slider-right {
-    animation-duration: 34s;
-  }
-
-  .footer-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+  line-height: 1.
+```

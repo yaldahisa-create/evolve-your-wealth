@@ -74,16 +74,11 @@ a {
   flex-shrink: 0;
 }
 
-.brand-eagle {
-  height: 26px;
+.brand-logo-single {
+  height: 40px;
   width: auto;
   object-fit: contain;
-}
-
-.brand-logo {
-  height: 34px;
-  width: auto;
-  object-fit: contain;
+  display: block;
 }
 
 .nav-links {
@@ -251,24 +246,15 @@ a {
   margin-bottom: 42px;
 }
 
-.hero-logo-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-}
-
-.hero-eagle {
-  height: 80px;
-}
-
-.hero-logo-main {
-  height: 100px;
+.hero-logo-single {
+  width: min(520px, 92%);
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .hero-script {
   color: var(--gold);
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 .hero-copy {
@@ -707,7 +693,9 @@ a {
 }
 
 .footer-brand img {
-  height: 30px;
+  height: 36px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-copy p {
@@ -784,29 +772,16 @@ a {
     width: 100%;
   }
 
-  .brand-eagle {
-    height: 20px;
-  }
-
-  .brand-logo {
-    height: 28px;
+  .brand-logo-single {
+    height: 30px;
   }
 
   .nav {
     min-height: 76px;
   }
 
-  .hero-logo-row {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .hero-eagle {
-    height: 50px;
-  }
-
-  .hero-logo-main {
-    height: 65px;
+  .hero-logo-single {
+    width: min(360px, 92%);
   }
 
   .hero-actions,

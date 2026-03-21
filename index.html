@@ -278,6 +278,7 @@
   <script>
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
+    const siteHeader = document.querySelector(".site-header");
 
     if (menuToggle && mobileMenu) {
       menuToggle.addEventListener("click", () => {
@@ -286,6 +287,17 @@
         menuToggle.setAttribute("aria-expanded", String(!expanded));
       });
     }
+
+    window.addEventListener("scroll", () => {
+      if (!siteHeader) return;
+      if (window.scrollY > 10) {
+        siteHeader.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.18)";
+        siteHeader.style.background = "rgba(0, 0, 0, 0.9)";
+      } else {
+        siteHeader.style.boxShadow = "none";
+        siteHeader.style.background = "rgba(0, 0, 0, 0.82)";
+      }
+    });
   </script>
 </body>
 </html>

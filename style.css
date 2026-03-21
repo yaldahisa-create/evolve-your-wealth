@@ -57,12 +57,20 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.98);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-/* LOGO SIZE (CLEAN + STRONG LIKE REFERENCE) */
+
+.site-header:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
 .nav {
-  min-height: 76px;
+  min-height: 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,15 +82,18 @@ a {
   align-items: center;
   flex-shrink: 0;
 }
+
 .brand-logo-single {
-  height: 34px;
-}
-/* LOGO SIZE (CLEAN + STRONG LIKE REFERENCE) */
-.brand-logo-single {
-  height: 46px;
+  height: 58px;
   width: auto;
   object-fit: contain;
   display: block;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.brand-lockup:hover .brand-logo-single {
+  transform: translateY(-1px) scale(1.01);
+  opacity: 1;
 }
 
 .nav-links {
@@ -92,17 +103,36 @@ a {
 }
 
 .nav-links a {
+  position: relative;
   color: rgba(255, 255, 255, 0.88);
   font-size: 0.82rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  transition: 0.25s ease;
+  transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-.nav-links a.active,
-.nav-links a:hover {
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--gold-soft), var(--gold));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.28s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--white);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
 }
 
 .nav-cta {
@@ -111,16 +141,23 @@ a {
 
 .menu-toggle {
   display: none;
-  width: 44px;
-  height: 44px;
-  background: transparent;
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 10px;
+  border-radius: 12px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4px;
   cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
 }
 
 .menu-toggle span {
@@ -128,6 +165,7 @@ a {
   width: 18px;
   background: white;
   border-radius: 999px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 /* BUTTONS */
@@ -278,6 +316,12 @@ a {
 .hero-logo-main {
   height: 104px;
   width: auto;
+  object-fit: contain;
+}
+
+.hero-logo-single {
+  width: min(520px, 92%);
+  margin: 0 auto;
   object-fit: contain;
 }
 
@@ -486,22 +530,240 @@ a {
   text-align: center;
 }
 
-/* CONSULTATION */
-.consultation-box {
+/* ABOUT SPLIT */
+.about-split {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 30px;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 36px;
   align-items: center;
 }
 
-.consultation-box h2 {
+.about-image-card {
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.about-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-copy h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+  margin-bottom: 10px;
+}
+
+/* SERVICES */
+.services-top-bar {
+  background: #000;
+  color: white;
+  padding: 14px 20px;
+  text-align: right;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.services-title {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.services-title h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: var(--gold);
+  letter-spacing: 0.2em;
+}
+
+.services-clean-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.services-images {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.services-images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.services-list-right ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.services-list-right li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.services-list-right li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-size: 1.4rem;
+}
+
+.service-card {
+  min-width: 260px;
+  background: rgba(255,255,255,0.92);
+  color: #111;
+  border-radius: 20px;
+  padding: 24px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+/* TEAM */
+.team-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.team-feature-card {
+  min-height: 620px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: #ddd;
+}
+
+.team-feature-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  object-fit: cover;
+}
+
+.team-copy-card {
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(17,17,17,0.08);
+  border-radius: 32px;
+  box-shadow: var(--shadow-soft);
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team-copy-card h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.3rem, 4vw, 4rem);
   line-height: 0.95;
   margin-bottom: 14px;
 }
 
-.consultation-actions {
+.team-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-template-areas:
+    "a b c"
+    "a d d";
+  gap: 20px;
+}
+
+.card-a { grid-area: a; }
+.card-b { grid-area: b; }
+.card-c { grid-area: c; }
+.card-d { grid-area: d; }
+
+.team-gallery-card {
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  min-height: 280px;
+  background: #ddd;
+}
+
+.team-gallery-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.team-gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-a,
+.card-a img {
+  min-height: 580px;
+}
+
+/* CONSULTATION */
+.consultation-box,
+.consultation-page-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.consultation-main-card,
+.consultation-side-card {
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(17,17,17,0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  padding: 34px;
+}
+
+.consultation-main-card h2,
+.consultation-side-card h2,
+.consultation-box h2,
+.consultation-step-card h3 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.consultation-main-card h2,
+.consultation-side-card h2,
+.consultation-box h2 {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+  margin-bottom: 14px;
+}
+
+.consultation-step-card {
+  min-width: 300px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border-radius: 28px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+}
+
+.consultation-step-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.consultation-actions,
+.consultation-page-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -538,12 +800,40 @@ a {
 
 /* MOBILE */
 @media (max-width: 1024px) {
-  .partners-logo-grid {
+  .about-split,
+  .services-clean-layout,
+  .team-layout,
+  .consultation-box,
+  .consultation-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .partners-logo-grid,
+  .partners-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .consultation-box {
-    grid-template-columns: 1fr;
+  .team-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c d";
+  }
+
+  .card-a,
+  .card-b,
+  .card-c,
+  .card-d,
+  .card-a img,
+  .card-b img,
+  .card-c img,
+  .card-d img {
+    min-height: 320px;
+  }
+
+  .team-feature-card,
+  .team-feature-card img {
+    min-height: 420px;
   }
 }
 
@@ -552,17 +842,30 @@ a {
     display: flex;
   }
 
+  .nav {
+    min-height: 82px;
+  }
+
+  .brand-logo-single {
+    height: 42px;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
     right: 10px;
-    top: 90px;
-    background: black;
-    padding: 20px;
-    border-radius: 12px;
+    top: calc(100% + 10px);
+    background: rgba(0, 0, 0, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 18px;
+    border-radius: 16px;
     width: min(300px, calc(100vw - 32px));
     z-index: 1001;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+    gap: 14px;
   }
 
   .nav-links.show {
@@ -574,12 +877,8 @@ a {
     width: 100%;
   }
 
-  .brand-logo-single {
-    height: 34px;
-  }
-
-  .nav {
-    min-height: 76px;
+  .nav-links a::after {
+    display: none;
   }
 
   .hero-section {
@@ -605,17 +904,45 @@ a {
   }
 
   .hero-actions,
-  .consultation-actions {
+  .consultation-actions,
+  .consultation-page-actions {
     flex-direction: column;
   }
 
   .hero-actions .btn,
-  .consultation-actions .btn {
+  .consultation-actions .btn,
+  .consultation-page-actions .btn {
     width: 100%;
   }
 
-  .partners-logo-grid {
+  .partners-logo-grid,
+  .partners-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .team-gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+  }
+
+  .card-a,
+  .card-b,
+  .card-c,
+  .card-d,
+  .card-a img,
+  .card-b img,
+  .card-c img,
+  .card-d img {
+    min-height: 240px;
+  }
+
+  .team-feature-card,
+  .team-feature-card img {
+    min-height: 300px;
   }
 
   .preview-card {
@@ -629,6 +956,12 @@ a {
     min-width: 255px;
     max-width: 255px;
     padding: 22px;
+  }
+
+  .consultation-step-card,
+  .service-card {
+    min-width: 240px;
+    max-width: 240px;
   }
 
   .preview-card h3,
@@ -653,3 +986,4 @@ a {
     align-items: flex-start;
   }
 }
+  

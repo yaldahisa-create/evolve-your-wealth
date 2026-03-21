@@ -15,7 +15,6 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -43,7 +42,7 @@
         <a href="services.html">Services</a>
         <a href="team.html">Team</a>
         <a href="partners.html">Partners</a>
-        <a href="consultation.html" class="btn btn-gold nav-cta">Book Consultation</a>
+        <a href="consultation.html" class="nav-cta">Book Consultation</a>
       </nav>
     </div>
   </header>
@@ -207,19 +206,15 @@
           <a href="https://www.nationallife.com/" target="_blank" rel="noopener" class="partner-logo-card">
             <img src="assets/partner-1.png" alt="National Life Group" />
           </a>
-
           <a href="https://www.prosperitylife.com/" target="_blank" rel="noopener" class="partner-logo-card">
             <img src="assets/partner-2.png" alt="Prosperity Life" />
           </a>
-
           <a href="https://lumico.com/" target="_blank" rel="noopener" class="partner-logo-card">
             <img src="assets/partner-3.png" alt="Lumico" />
           </a>
-
           <a href="https://www.equitrust.com/" target="_blank" rel="noopener" class="partner-logo-card">
             <img src="assets/partner-4.png" alt="EquiTrust" />
           </a>
-
           <a href="https://www.fglife.com/" target="_blank" rel="noopener" class="partner-logo-card">
             <img src="assets/partner-5.png" alt="F&G Annuity & Life" />
           </a>
@@ -291,11 +286,9 @@
     window.addEventListener("scroll", () => {
       if (!siteHeader) return;
       if (window.scrollY > 10) {
-        siteHeader.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.18)";
-        siteHeader.style.background = "rgba(0, 0, 0, 0.9)";
+        siteHeader.classList.add("scrolled");
       } else {
-        siteHeader.style.boxShadow = "none";
-        siteHeader.style.background = "rgba(0, 0, 0, 0.82)";
+        siteHeader.classList.remove("scrolled");
       }
     });
   </script>

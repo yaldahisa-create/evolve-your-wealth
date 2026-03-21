@@ -60,9 +60,9 @@ a {
   background: rgba(0, 0, 0, 0.98);
   backdrop-filter: blur(8px);
 }
-
+/* LOGO SIZE (CLEAN + STRONG LIKE REFERENCE) */
 .nav {
-  min-height: 84px;
+  min-height: 76px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,9 +74,12 @@ a {
   align-items: center;
   flex-shrink: 0;
 }
-
 .brand-logo-single {
-  height: 42px;
+  height: 34px;
+}
+/* LOGO SIZE (CLEAN + STRONG LIKE REFERENCE) */
+.brand-logo-single {
+  height: 46px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -572,7 +575,7 @@ a {
   }
 
   .brand-logo-single {
-    height: 32px;
+    height: 34px;
   }
 
   .nav {

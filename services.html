@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Evolve Insurance Agency</title>
-  <meta name="description" content="Explore the services offered by Evolve Insurance Agency, including life insurance, retirement planning, and legacy protection." />
+  <title>Services | Evolve Your Wealth</title>
+  <meta
+    name="description"
+    content="Explore the services offered by Evolve Your Wealth, including protection, retirement, and legacy planning."
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,16 +22,18 @@
       <a href="index.html" class="brand-lockup">
         <img src="assets/new-logo.png" alt="Evolve logo" class="brand-logo-single" />
       </a>
+
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
+
       <nav class="nav-links" id="mobileMenu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html" class="active">Services</a>
         <a href="team.html">Team</a>
         <a href="partners.html">Partners</a>
-        <a href="consultation.html" class="btn btn-gold nav-cta">Book a Consultation</a>
+        <a href="consultation.html" class="nav-cta">Book Consultation</a>
       </nav>
     </div>
   </header>
@@ -36,12 +44,15 @@
         <div class="section-heading center">
           <span class="eyebrow">Services</span>
           <h1>Protection, strategy, and long-term confidence.</h1>
-          <p>Evolve offers personalized solutions designed to help individuals, families, and entrepreneurs protect what matters and plan wisely.</p>
+          <p>
+            Evolve offers personalized solutions designed to help individuals,
+            families, and entrepreneurs protect what matters and plan wisely.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="section-light services-clean">
+    <section class="section-light">
       <div class="container">
         <div class="services-top-bar"><span>SERVICES</span></div>
         <div class="services-title"><h2>SERVICES WE OFFER</h2></div>
@@ -101,10 +112,14 @@
         <div>
           <span class="eyebrow">Next Step</span>
           <h2>Ready to explore the right strategy for your future?</h2>
-          <p>Let’s build a plan that gives you clarity, protection, and confidence for what matters most.</p>
+          <p>
+            Let’s build a plan that gives you clarity, protection, and confidence
+            for what matters most.
+          </p>
         </div>
+
         <div class="consultation-actions">
-          <a href="consultation.html" class="btn btn-gold">Book a Consultation</a>
+          <a href="consultation.html" class="btn btn-gold">Book Consultation</a>
           <a href="about.html" class="btn btn-outline">Learn About Evolve</a>
         </div>
       </div>
@@ -113,10 +128,12 @@
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <div class="footer-brand"><img src="assets/new-logo.png" alt="Evolve logo" /></div>
+      <div class="footer-brand">
+        <img src="assets/new-logo.png" alt="Evolve logo" />
+      </div>
       <div class="footer-copy">
-        <p>© 2026 Evolve Insurance Agency. All rights reserved.</p>
-        <p>Website designed by <a href="https://www.instagram.com/valenciadigitalstudio?igsh=MWRkOGlpdWNxNnF4ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Valencia Digital Studio</a></p>
+        <p>© 2026 Evolve Your Wealth. All rights reserved.</p>
+        <p>Designed by <a href="https://www.instagram.com/valenciadigitalstudio?igsh=MWRkOGlpdWNxNnF4ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Valencia Digital Studio</a></p>
       </div>
     </div>
   </footer>
@@ -124,6 +141,8 @@
   <script>
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
+    const siteHeader = document.querySelector(".site-header");
+
     if (menuToggle && mobileMenu) {
       menuToggle.addEventListener("click", () => {
         mobileMenu.classList.toggle("show");
@@ -131,6 +150,15 @@
         menuToggle.setAttribute("aria-expanded", String(!expanded));
       });
     }
+
+    window.addEventListener("scroll", () => {
+      if (!siteHeader) return;
+      if (window.scrollY > 10) {
+        siteHeader.classList.add("scrolled");
+      } else {
+        siteHeader.classList.remove("scrolled");
+      }
+    });
   </script>
 </body>
 </html>

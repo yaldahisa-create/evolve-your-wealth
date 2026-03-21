@@ -74,8 +74,9 @@ a {
   flex-shrink: 0;
 }
 
+/* NEW SINGLE HEADER LOGO */
 .brand-logo-single {
-  height: 40px;
+  height: 42px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -246,6 +247,27 @@ a {
   margin-bottom: 42px;
 }
 
+/* HOMEPAGE OLD HERO LOGO ROW */
+.hero-logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-eagle {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hero-logo-main {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* OPTIONAL SINGLE HERO LOGO SUPPORT */
 .hero-logo-single {
   width: min(520px, 92%);
   margin: 0 auto;
@@ -773,11 +795,23 @@ a {
   }
 
   .brand-logo-single {
-    height: 30px;
+    height: 32px;
   }
 
   .nav {
     min-height: 76px;
+  }
+
+  .hero-logo-row {
+    gap: 10px;
+  }
+
+  .hero-eagle {
+    height: 50px;
+  }
+
+  .hero-logo-main {
+    height: 65px;
   }
 
   .hero-logo-single {
